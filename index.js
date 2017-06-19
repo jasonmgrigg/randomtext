@@ -3,7 +3,7 @@ const app = express();
 
 var loremIpsum = require('lorem-ipsum')
     output = loremIpsum({
-    count: 3
+    count: 1
   , units: 'paragraphs'
   , sentenceLowerBound: 3
   , sentenceUpperBound: 5
@@ -13,7 +13,7 @@ var loremIpsum = require('lorem-ipsum')
   , suffix: "###########"
 });
 
-app.get('/lorem', function(req, res) {
+app.get('/lorem/:count', function(req, res) {
   res.send(output);
 });
 
