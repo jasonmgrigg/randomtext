@@ -9,8 +9,8 @@ var loremIpsum = require('lorem-ipsum')
   , sentenceUpperBound: 5
   , paragraphLowerBound: 4
   , paragraphUpperBound: 6
-  , format: 'plain'
-  , suffix: "###########"
+  , format: 'html'
+  , suffix: "\n"
 });
 
 app.get('/lorem/:count', function(req, res) {
@@ -22,8 +22,8 @@ app.get('/lorem/:count', function(req, res) {
 , sentenceUpperBound: 5
 , paragraphLowerBound: 4
 , paragraphUpperBound: 6
-, format: 'plain'
-, suffix: "###########"
+, format: 'html'
+, suffix: "\n"
 });
 res.send(output);
 });
